@@ -1,0 +1,29 @@
+## Server
+server:
+  context-path: ''
+  port: 8080
+
+## Application
+spring:
+  application:
+    name: weather-forecast-backend
+  messages:
+    basename: i18n/enum_messages, i18n/external_messages, i18n/general_messages
+  cloud.config.enabled: false
+
+#Disable cache
+#spring.cache.type: none
+
+management:
+  context-path: /actuator
+  port: ${server.port}
+  endpoints.web.exposure.include: info, health, mappings
+
+logging:
+  level: 
+    org.komytron.weatherforecast: INFO
+  
+client:
+    aemet:
+        url: https://opendata.aemet.es/opendata/api
+        apiKey: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYU52aWllckBnbWFpbC5jb20iLCJqdGkiOiJlNTg3NDU3Yy04ZmJmLTQ3ZTQtOTgyNS1kMjU5ZGRkM2YzZGYiLCJpc3MiOiJBRU1FVCIsImlhdCI6MTYzNzMzNTIwNSwidXNlcklkIjoiZTU4NzQ1N2MtOGZiZi00N2U0LTk4MjUtZDI1OWRkZDNmM2RmIiwicm9sZSI6IiJ9.YFJifCXYMwToY6bJ_DePWsV455P3IPA23nPiDur0oCc
