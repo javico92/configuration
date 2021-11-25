@@ -27,3 +27,9 @@ client:
     aemet:
         url: https://opendata.aemet.es/opendata/api
         apiKey: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYU52aWllckBnbWFpbC5jb20iLCJqdGkiOiJlNTg3NDU3Yy04ZmJmLTQ3ZTQtOTgyNS1kMjU5ZGRkM2YzZGYiLCJpc3MiOiJBRU1FVCIsImlhdCI6MTYzNzMzNTIwNSwidXNlcklkIjoiZTU4NzQ1N2MtOGZiZi00N2U0LTk4MjUtZDI1OWRkZDNmM2RmIiwicm9sZSI6IiJ9.YFJifCXYMwToY6bJ_DePWsV455P3IPA23nPiDur0oCc
+
+aemet:
+  filter:
+    period:
+      enabled: true
+      values: 00-06,06-12,12-18,18-24
